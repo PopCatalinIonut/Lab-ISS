@@ -1,0 +1,12 @@
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\ISS_Bugs.exe.config
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\ISS_Bugs.exe
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\ISS_Bugs.pdb
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS Bugs.csprojAssemblyReference.cache
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.Properties.Resources.resources
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS Bugs.csproj.GenerateResource.cache
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS Bugs.csproj.CoreCompileInputs.cache
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.exe
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.pdb
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.LoginForm.resources
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.ProgrammerForm.resources
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.TesterForm.resources
