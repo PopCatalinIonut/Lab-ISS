@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+    <Import Project="packages\SQLite.3.13.0\build\net45\SQLite.props" Condition="Exists('packages\SQLite.3.13.0\build\net45\SQLite.props')" />
     <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +14,7 @@
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <Deterministic>true</Deterministic>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +36,34 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="linq2db, Version=3.3.0.0, Culture=neutral, PublicKeyToken=e41013125f9e410a">
+          <HintPath>packages\linq2db.3.3.0\lib\net45\linq2db.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System" />
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Configuration" />
         <Reference Include="System.Core" />
+        <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+          <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net45\System.Data.SQLite.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+          <HintPath>packages\System.Data.SQLite.EF6.1.0.113.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+          <HintPath>packages\System.Data.SQLite.Linq.1.0.113.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System.Xml.Linq" />
         <Reference Include="System.Data.DataSetExtensions" />
         <Reference Include="Microsoft.CSharp" />
@@ -46,31 +75,63 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="LoginForm.cs">
+        <Compile Include="controller\LoginController.cs" />
+        <Compile Include="controller\ProgrammerController.cs" />
+        <Compile Include="controller\TesterController.cs" />
+        <Compile Include="controller\UserController.cs" />
+        <Compile Include="domain\Bug.cs" />
+        <Compile Include="domain\Entity.cs" />
+        <Compile Include="domain\Programmer.cs" />
+        <Compile Include="domain\Status.cs" />
+        <Compile Include="domain\Tester.cs" />
+        <Compile Include="domain\User.cs" />
+        <Compile Include="domain\validator\BugValidator.cs" />
+        <Compile Include="domain\validator\IValidator.cs" />
+        <Compile Include="domain\validator\UserValidator.cs" />
+        <Compile Include="domain\validator\ValidatorException.cs" />
+        <Compile Include="gui\LoginForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="LoginForm.Designer.cs">
+        <Compile Include="gui\LoginForm.Designer.cs">
           <DependentUpon>LoginForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="Program.cs" />
-        <Compile Include="ProgrammerForm.cs">
+        <Compile Include="gui\ProgrammerForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="ProgrammerForm.Designer.cs">
+        <Compile Include="gui\ProgrammerForm.Designer.cs">
           <DependentUpon>ProgrammerForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="TesterForm.cs">
+        <Compile Include="gui\ProgrammerListForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="TesterForm.Designer.cs">
+        <Compile Include="gui\ProgrammerListForm.Designer.cs">
+          <DependentUpon>ProgrammerListForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="gui\TesterForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="gui\TesterForm.Designer.cs">
           <DependentUpon>TesterForm.cs</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="LoginForm.resx">
+        <Compile Include="persistance\BugsRepository.cs" />
+        <Compile Include="persistance\DBUtils.cs" />
+        <Compile Include="persistance\UsersRepository.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="persistance\IRepository.cs" />
+        <Compile Include="service\AppService.cs" />
+        <Compile Include="service\ServiceException.cs" />
+        <EmbeddedResource Include="gui\LoginForm.resx">
           <DependentUpon>LoginForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="ProgrammerForm.resx">
+        <EmbeddedResource Include="gui\ProgrammerForm.resx">
           <DependentUpon>ProgrammerForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="gui\ProgrammerListForm.resx">
+          <DependentUpon>ProgrammerListForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="gui\TesterForm.resx">
+          <DependentUpon>TesterForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -81,9 +142,7 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="TesterForm.resx">
-          <DependentUpon>TesterForm.cs</DependentUpon>
-        </EmbeddedResource>
+        <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
             <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,4 +157,15 @@
         <None Include="App.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+      <PropertyGroup>
+        <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      </PropertyGroup>
+      <Error Condition="!Exists('packages\SQLite.3.13.0\build\net45\SQLite.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\SQLite.3.13.0\build\net45\SQLite.props'))" />
+      <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+      <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+      <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    </Target>
+    <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+    <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
 </Project>

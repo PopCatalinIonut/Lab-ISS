@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
+using controllers;
+using persistance;
+using service;
 
 namespace ISS_Bugs
 {
@@ -14,9 +15,15 @@ namespace ISS_Bugs
         [STAThread]
         static void Main()
         {
+            
+            UsersRepository usersRepo = new UsersRepository();
+            BugsRepository bugsRepo = new BugsRepository();
+            AppService service = new AppService(usersRepo,bugsRepo);
+            LoginController loginController = new LoginController(service);
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new LoginForm(loginController));
         }
     }
 }

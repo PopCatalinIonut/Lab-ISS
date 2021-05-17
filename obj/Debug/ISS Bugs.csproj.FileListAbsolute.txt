@@ -10,3 +10,17 @@ C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.pdb
 C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.LoginForm.resources
 C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.ProgrammerForm.resources
 C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.TesterForm.resources
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\linq2db.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\linq2db.xml
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS Bugs.csproj.CopyComplete
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\x86\sqlite3.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\x64\sqlite3.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\EntityFramework.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\System.Data.SQLite.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\EntityFramework.xml
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\bin\Debug\System.Data.SQLite.xml
+C:\Users\papy_\Desktop\An 2 Sem 2\ISS\ISS App\ISS Bugs\obj\Debug\ISS_Bugs.ProgrammerListForm.resources
