@@ -42,8 +42,8 @@ namespace ISS_Bugs
                     DateTime date = DateTime.Now;
                     string foundBy = testerCtrl.currentUser;
                     Bug bug = new Bug(name, description, foundBy, date, Status.Unresolved);
-                    testerCtrl.insertBug(bug);
-                    bugListTable.Rows.Add(bug.name, bug.status,bug.date,bug.id);
+                    Bug inserted = testerCtrl.insertBug(bug);
+                    bugListTable.Rows.Add(inserted.name, inserted.status,inserted.date,inserted.id);
                 }
                 catch (ValidationException exc) { MessageBox.Show(exc.Message); } 
                 catch (ServerException exc) { MessageBox.Show(exc.Message); }
@@ -53,9 +53,7 @@ namespace ISS_Bugs
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            Trace.WriteLine("gasit");
             var selected = bugListTable.SelectedRows[0].Cells[3].Value.ToString();
-            Trace.WriteLine(selected);
             var elem = Int32.Parse(bugListTable.SelectedRows[0].Cells[3].Value.ToString());
     
             if(testerCtrl.deleteBug(elem)!=0)

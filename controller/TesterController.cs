@@ -17,9 +17,9 @@ namespace controllers
             this.currentUser = currentUser;
         }
 
-        public void insertBug(Bug bug)
+        public Bug  insertBug(Bug bug)
         {
-            appService.insertBug(bug);
+            return appService.insertBug(bug);
         }
 
         public List<Bug> getInsertedBugs()

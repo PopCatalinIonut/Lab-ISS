@@ -10,11 +10,10 @@ namespace ISS_Bugs
         public ProgrammerListForm(List<User> programmers)
         {
             InitializeComponent();
-            List<string> listItems = null;
             foreach (var el in programmers)
-                listItems.Add(el.username);
-            var listViewItem = new ListViewItem(listItems.ToArray()); 
-            programmersList.Items.Add(listViewItem);
+            {
+                progView.Rows.Add(el.username);
+            }
         }
     }
 }

@@ -18,6 +18,11 @@ namespace domain
 
         public User() { }
 
+        public User(string username, string password, string position) {
+            this.username = username;
+            this.password = password;
+            this.position = position;
+        }
         public override string ToString() {
             return username + ' ' + password + ' ' + position;
         }

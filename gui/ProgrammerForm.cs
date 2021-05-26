@@ -33,7 +33,7 @@ namespace ISS_Bugs
         private void logoutButton_Click(object sender, EventArgs e)
         {
             progCtrl.logout();
-            this.Hide();
+            Hide();
             loginWin.Show();
         }
 

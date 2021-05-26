@@ -69,13 +69,13 @@ namespace ISS_Bugs
             this.bugListTable.AllowUserToResizeRows = false;
             this.bugListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bugListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.nameColumn, this.statusColumn, this.dateColumn, this.idColumn});
-            this.bugListTable.Location = new System.Drawing.Point(310, 68);
+            this.bugListTable.Location = new System.Drawing.Point(297, 68);
             this.bugListTable.Name = "bugListTable";
             this.bugListTable.ReadOnly = true;
             this.bugListTable.RowHeadersVisible = false;
             this.bugListTable.RowTemplate.Height = 24;
             this.bugListTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bugListTable.Size = new System.Drawing.Size(273, 160);
+            this.bugListTable.Size = new System.Drawing.Size(290, 160);
             this.bugListTable.TabIndex = 4;
             // 
             // nameColumn

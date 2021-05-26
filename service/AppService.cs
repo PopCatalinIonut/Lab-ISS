@@ -35,13 +35,14 @@ namespace service
             return null;
         }
 
-        public void insertBug(Bug bug)
+        public Bug insertBug(Bug bug)
         {
             BugValidator vali = new BugValidator();
             vali.Validate(bug);
             Bug inserted = bugsRepo.Save(bug);
             if (inserted == null)
                 throw new ServiceException("Bug was not added!");
+            return inserted;
         }
 
         public List<Bug> getBugsByOwner(string currentUser)

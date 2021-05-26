@@ -23,7 +23,12 @@ namespace persistance
             var con = ORMConnectionFactory.getConnection();
             var inserted = con.Insert(entity);
             if (inserted != 0)
-                return entity;
+            {
+                var elem = con.GetTable<Bug>().Where(x =>
+                    x.name == entity.name && x.date == entity.date && x.foundBy == entity.foundBy &&
+                    x.description == entity.description);
+                return elem.First();
+            }
             return null;
         }
 

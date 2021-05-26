@@ -31,29 +31,48 @@ namespace ISS_Bugs
         /// </summary>
         private void InitializeComponent()
         {
-            this.programmersList = new System.Windows.Forms.ListView();
+            this.progView = new System.Windows.Forms.DataGridView();
+            this.nameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize) (this.progView)).BeginInit();
             this.SuspendLayout();
             // 
-            // programmersList
+            // progView
             // 
-            this.programmersList.Location = new System.Drawing.Point(1, -1);
-            this.programmersList.Name = "programmersList";
-            this.programmersList.Size = new System.Drawing.Size(278, 241);
-            this.programmersList.TabIndex = 0;
-            this.programmersList.UseCompatibleStateImageBehavior = false;
+            this.progView.AllowUserToAddRows = false;
+            this.progView.AllowUserToDeleteRows = false;
+            this.progView.AllowUserToResizeColumns = false;
+            this.progView.AllowUserToResizeRows = false;
+            this.progView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.progView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.nameColumn});
+            this.progView.Location = new System.Drawing.Point(60, -2);
+            this.progView.Name = "progView";
+            this.progView.RowHeadersVisible = false;
+            this.progView.RowTemplate.Height = 24;
+            this.progView.Size = new System.Drawing.Size(163, 300);
+            this.progView.TabIndex = 0;
+            // 
+            // nameColumn
+            // 
+            this.nameColumn.HeaderText = "name";
+            this.nameColumn.Name = "nameColumn";
+            this.nameColumn.ReadOnly = true;
+            this.nameColumn.Width = 120;
             // 
             // ProgrammerListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 239);
-            this.Controls.Add(this.programmersList);
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Controls.Add(this.progView);
             this.Name = "ProgrammerListForm";
             this.Text = "ProgrammerListForm";
+            ((System.ComponentModel.ISupportInitialize) (this.progView)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.ListView programmersList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameColumn;
+
+        private System.Windows.Forms.DataGridView progView;
 
         #endregion
     }

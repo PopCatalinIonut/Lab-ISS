@@ -42,7 +42,7 @@ namespace ISS_Bugs
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(97, 174);
+            this.label1.Location = new System.Drawing.Point(108, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 31);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace ISS_Bugs
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(97, 253);
+            this.label2.Location = new System.Drawing.Point(108, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 33);
             this.label2.TabIndex = 1;
@@ -59,14 +59,14 @@ namespace ISS_Bugs
             // 
             // usernameTextbox
             // 
-            this.usernameTextbox.Location = new System.Drawing.Point(248, 178);
+            this.usernameTextbox.Location = new System.Drawing.Point(267, 178);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(113, 22);
             this.usernameTextbox.TabIndex = 2;
             // 
             // passwordTextbox
             // 
-            this.passwordTextbox.Location = new System.Drawing.Point(248, 257);
+            this.passwordTextbox.Location = new System.Drawing.Point(267, 257);
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.PasswordChar = '*';
             this.passwordTextbox.Size = new System.Drawing.Size(113, 22);
@@ -77,13 +77,13 @@ namespace ISS_Bugs
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.welcomeLabel.Location = new System.Drawing.Point(153, 68);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(208, 58);
+            this.welcomeLabel.Size = new System.Drawing.Size(227, 58);
             this.welcomeLabel.TabIndex = 4;
             this.welcomeLabel.Text = "Welcome!";
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(193, 333);
+            this.loginButton.Location = new System.Drawing.Point(211, 337);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(96, 34);
             this.loginButton.TabIndex = 5;

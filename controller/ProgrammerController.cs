@@ -9,7 +9,12 @@ namespace controllers
     {
         private AppService appService;
         public string currentUser { get; }
-        public ProgrammerController(AppService appService) { this.appService = appService; }
+
+        public ProgrammerController(AppService appService, string currentUser)
+        {
+            this.appService = appService;
+            this.currentUser = currentUser;
+        }
 
         public void logout()
         {
