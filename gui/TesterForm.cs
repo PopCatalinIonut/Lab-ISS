@@ -53,9 +53,7 @@ namespace ISS_Bugs
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            var selected = bugListTable.SelectedRows[0].Cells[3].Value.ToString();
             var elem = Int32.Parse(bugListTable.SelectedRows[0].Cells[3].Value.ToString());
-    
             if(testerCtrl.deleteBug(elem)!=0)
             {
                 bugListTable.Rows.RemoveAt(bugListTable.SelectedRows[0].Index);

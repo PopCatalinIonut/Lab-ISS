@@ -17,13 +17,6 @@ namespace controllers
         {
             return appService.login(username, password);
         }
-
-        public AppService service
-        {
-            get
-            {
-                return appService;
-            }
-        }
+        
     }
 }

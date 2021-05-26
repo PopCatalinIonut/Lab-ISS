@@ -47,12 +47,12 @@ namespace persistance
             return deleted;
         }
         
-        public Bug Update(Bug entity, Bug newEntity)
+        public Bug Update(Bug entity)
         {
             var con = ORMConnectionFactory.getConnection();
-            var updated = con.Update(newEntity);
+            var updated = con.Update(entity);
             if (updated != 0)
-                return newEntity;
+                return entity;
             return null;
         }
 

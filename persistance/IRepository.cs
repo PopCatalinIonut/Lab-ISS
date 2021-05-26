@@ -9,6 +9,6 @@ namespace persistance
 
         E Delete(E entity);
 
-        E Update(E entity, E newEntity);
+        E Update(E entity);
     }
 }

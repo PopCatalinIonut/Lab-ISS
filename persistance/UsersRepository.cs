@@ -21,7 +21,7 @@ namespace persistance
             throw new System.NotImplementedException();
         }
 
-        public User Update(User entity, User newEntity)
+        public User Update(User entity)
         {
             throw new System.NotImplementedException();
         }

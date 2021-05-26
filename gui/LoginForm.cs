@@ -33,14 +33,14 @@ namespace ISS_Bugs
                         Hide();
                         if (user.position == "Programmer")
                         {
-                            ProgrammerController progCtrl = new ProgrammerController(loginCtrl.service, user.username);
+                            ProgrammerController progCtrl = new ProgrammerController(loginCtrl.appService, user.username);
                             ProgrammerForm progForm = new ProgrammerForm(progCtrl);
                             progForm.loginWin = this;
                             progForm.Show();
                         }
                         else if (user.position == "Tester")
                         {
-                            TesterController testerCtrl = new TesterController(loginCtrl.service, user.username);
+                            TesterController testerCtrl = new TesterController(loginCtrl.appService, user.username);
                             TesterForm testerForm = new TesterForm(testerCtrl);
                             testerForm.loginWin = this;
                             testerForm.Show();
